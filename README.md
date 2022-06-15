@@ -1,4 +1,4 @@
 ## COMMON PROJECT
 
 ### INSTALL
-npm install @vtjs/common
+npm install @hiennc/common
