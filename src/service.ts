@@ -76,6 +76,11 @@ export abstract class BaseService<T> implements IBaseService<T> {
     return data;
   }
 
+  async updateOne(filter: any, update?: any, options?: any, callback?: any) {
+		const raw = await this.repo.updateOne(filter, update, options, callback)
+		return raw
+	}
+
   protected async getCache(cond: Partial<T>): Promise<T | null> {
     if (!this.cache) return null;
     if (!Object.keys(cond).length) return null;
